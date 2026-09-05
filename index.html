@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OnelixGlobal | Bienestar real, sin humo — guías digitales y catálogo físico</title>
+<meta name="description" content="OnelixGlobal es la marca de bienestar físico honesto: guías digitales y catálogo físico (postura, descanso) probados antes de venderlos. Lanzamiento muy pronto — apúntate y sé el primero en saberlo.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://onelixglobal.com/">
+<link rel="icon" href="logo-onelix.png" type="image/png">
+
+<!-- Open Graph / redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="OnelixGlobal">
+<meta property="og:url" content="https://onelixglobal.com/">
+<meta property="og:title" content="OnelixGlobal | Bienestar real, sin humo">
+<meta property="og:description" content="Guías digitales y catálogo físico de bienestar, probados antes de venderlos. Sin fórmulas milagro. Lanzamiento muy pronto.">
+<meta property="og:image" content="https://onelixglobal.com/portada_guia.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OnelixGlobal | Bienestar real, sin humo">
+<meta name="twitter:description" content="Guías digitales y catálogo físico de bienestar, probados antes de venderlos. Lanzamiento muy pronto.">
+<meta name="twitter:image" content="https://onelixglobal.com/portada_guia.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Lora:ital@1&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "OnelixGlobal",
+  "url": "https://onelixglobal.com/",
+  "logo": "https://onelixglobal.com/logo-onelix.png",
+  "email": "info@onelixglobal.com",
+  "sameAs": ["https://onelixglobal.gumroad.com"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Cuello y hombros sin tensión — Guía de 15 días (PDF)",
+  "description": "Guía digital de 15 días con rutinas de 10-15 minutos para aliviar el dolor de cuello y hombros por horas de pantalla, ergonomía práctica y micro-hábitos. Incluye bono de rutina exprés de 5 minutos.",
+  "image": "https://onelixglobal.com/portada_guia.png",
+  "brand": { "@type": "Brand", "name": "OnelixGlobal" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://onelixglobal.com/#digital",
+    "priceCurrency": "USD",
+    "price": "8.90",
+    "availability": "https://schema.org/PreOrder"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuándo puedo comprar la guía digital o el catálogo físico?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Muy pronto. Ambas líneas están en la recta final; apúntate con tu correo y te avisamos en el mismo momento en que se abra la compra." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se paga?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Las guías digitales se pagan con tarjeta y se descargan al instante. El catálogo físico se paga contra entrega en Colombia (México próximamente), sin adelantar dinero." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿A dónde envían el catálogo físico?",
+      "acceptedAnswer": { "@type": "Answer", "text": "De momento a Colombia, con México como siguiente mercado. Las guías digitales se venden a cualquier país." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué apuntarme antes de que esté disponible?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para ser de los primeros en poder comprar y recibir el aviso exacto del lanzamiento, sin tener que estar revisando la web cada semana. Sin spam, solo avisos de OnelixGlobal." }
+    }
+  ]
+}
+</script>
+<style>
+  /* ---------- tokens ---------- */
+  :root{
+    --ink:#0b1226;          /* azul tinta principal */
+    --navy:#101a3c;
+    --navy-2:#16224d;
+    --blue:#1d4ed8;
+    --paper:#f6f4ef;        /* fondo cálido */
+    --card:#ffffff;
+    --line:#e5e1d8;
+    --muted:#5c6476;
+    --gold:#b98a2f;
+    --green:#15803d;
+    --sora:'Sora',system-ui,sans-serif;
+    --inter:'Inter',system-ui,sans-serif;
+    --serif:'Lora',Georgia,serif;
+    --r-lg:26px; --r-md:16px; --r-sm:10px;
+    --shadow-lg:0 30px 60px -22px rgba(11,18,38,.28);
+    --shadow-sm:0 10px 28px -14px rgba(11,18,38,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--inter);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  ::selection{background:var(--blue);color:#fff}
+
+  /* ---------- nav ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(246,244,239,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--sora);font-weight:700;font-size:20px;letter-spacing:-.02em;text-decoration:none}
+  .brand img{width:34px;height:34px;border-radius:9px}
+  .brand em{font-style:normal;color:var(--blue)}
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--muted);text-decoration:none;padding:9px 14px;border-radius:var(--r-sm);transition:.18s}
+  .nav-links a:hover{color:var(--ink);background:#ebe8e0}
+  .nav-cta{font-family:var(--sora);font-weight:600;font-size:14px;background:var(--ink);color:#fff!important;padding:11px 18px!important;border-radius:999px}
+  .nav-cta:hover{background:var(--blue)}
+  @media(max-width:840px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:84px 0 90px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:auto -12% -46% 32%;height:560px;background:radial-gradient(closest-side,rgba(29,78,216,.12),transparent)}
+  .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:64px;align-items:center;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:#e8edfb;border:1px solid #d4ddf6;padding:7px 14px;border-radius:999px;margin-bottom:26px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(21,128,61,.18)}
+  h1{font-family:var(--sora);font-weight:800;font-size:clamp(36px,5vw,60px);line-height:1.05;letter-spacing:-.035em;margin-bottom:24px}
+  h1 .accent{color:var(--blue)}
+  h1 .line2{display:block}
+  .lead{font-size:clamp(16px,1.4vw,19px);color:var(--muted);max-width:520px;margin-bottom:34px}
+  .lead strong{color:var(--ink);font-weight:600}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sora);font-weight:600;font-size:15px;text-decoration:none;padding:15px 26px;border-radius:999px;transition:.2s;border:1.5px solid transparent}
+  .btn-solid{background:var(--ink);color:#fff}
+  .btn-solid:hover{background:var(--blue);transform:translateY(-1px)}
+  .btn-ghost{border-color:#cfc9bc;color:var(--ink);background:transparent}
+  .btn-ghost:hover{border-color:var(--ink);background:#fff}
+  .btn-sm{padding:11px 20px;font-size:13.5px}
+  .hero-note{margin-top:26px;font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:center}
+  .hero-note svg{width:15px;height:15px;stroke:var(--green)}
+
+  /* tarjeta "nuestras líneas" en el hero (composición, sin fotos externas) */
+  .stage{position:relative;min-height:430px}
+  .stage .orb{position:absolute;border-radius:50%;filter:blur(2px)}
+  .orb.a{width:220px;height:220px;top:-30px;right:6%;background:linear-gradient(135deg,#dbe6ff,#bcd0fb)}
+  .orb.b{width:150px;height:150px;bottom:6%;left:-4%;background:linear-gradient(135deg,#ece4d2,#d9cfb8)}
+  .pcard{position:relative;background:var(--card);border-radius:30px;padding:26px 24px;box-shadow:var(--shadow-lg);border:1px solid #f0ede6;transform:rotate(-1.2deg);max-width:400px;margin-left:auto}
+  .pcard-tags{display:flex;gap:8px;margin-bottom:16px}
+  .pill{font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:999px;letter-spacing:.02em}
+  .pill.blue{background:#e8edfb;color:var(--blue)}
+  .pill.green{background:#e5f4ea;color:var(--green)}
+  .pcard h3{font-family:var(--sora);font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+  .linea-mini{display:flex;align-items:center;gap:13px;padding:15px 0;border-top:1px solid var(--line)}
+  .linea-mini:first-of-type{border-top:none;padding-top:6px}
+  .linea-mini-ic{width:40px;height:40px;border-radius:11px;background:#eef1fb;display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+  .linea-mini strong{font-family:var(--sora);font-size:14.5px;display:block}
+  .linea-mini .sub{font-size:12px;color:var(--muted)}
+  .linea-mini .pill{margin-left:auto;white-space:nowrap}
+  .float{position:absolute;background:#fff;border-radius:14px;box-shadow:var(--shadow-sm);padding:10px 15px;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:9px;border:1px solid #f0ede6;font-family:var(--sora)}
+  .float i{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(21,128,61,.16)}
+  .f1{top:26px;left:-6%}
+  .f2{bottom:64px;right:-8%}
+  @media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:54px}.stage{margin-top:8px}.pcard{margin:0 auto}.f1{left:2%}.f2{right:2%}}
+  @media(prefers-reduced-motion:no-preference){
+    .float{animation:flotar 5.5s ease-in-out infinite}
+    .f2{animation-delay:2.6s}
+    .pcard{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  }
+  @keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+  /* ---------- secciones ---------- */
+  section{padding:78px 0}
+  .kicker{font-family:var(--sora);font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+  h2{font-family:var(--sora);font-weight:800;letter-spacing:-.03em;font-size:clamp(27px,3.2vw,42px);line-height:1.12;margin-bottom:18px}
+  .bajada{color:var(--muted);font-size:16.5px;max-width:560px}
+
+  /* declaración editorial: qué es la marca */
+  .declaracion{background:var(--ink);color:#eef1fa}
+  .declaracion .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .declaracion .kicker{color:#8fb0ff}
+  .declaracion h2{color:#fff}
+  .declaracion .bajada{color:#b9c1d8}
+  .pull{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2vw,27px);line-height:1.5;color:#dfe6ff;border-left:2px solid var(--blue);padding-left:26px}
+  @media(max-width:900px){.declaracion .wrap{grid-template-columns:1fr;gap:34px}}
+
+  /* cómo funciona: numerado editorial */
+  .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;border-top:1px solid var(--line)}
+  .paso{border-left:1px solid var(--line);padding:30px 30px 6px}
+  .paso:first-child{border-left:0;padding-left:0}
+  .paso .num{font-family:var(--sora);font-weight:800;font-size:15px;color:var(--blue);letter-spacing:.08em}
+  .paso h3{font-family:var(--sora);font-weight:700;font-size:19px;letter-spacing:-.01em;margin:14px 0 9px}
+  .paso p{color:var(--muted);font-size:14.5px}
+  @media(max-width:860px){.pasos{grid-template-columns:1fr}.paso,.paso:first-child{border-left:0;border-top:1px solid var(--line);padding:26px 0}.paso:first-child{border-top:0}}
+
+  /* NUESTRAS LÍNEAS — el hub de formas de ganar dinero */
+  .lineas-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:48px}
+  .linea-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;scroll-margin-top:90px;transition:.25s}
+  .linea-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#d8d2c4}
+  .lc-top{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+  .lc-ic{width:46px;height:46px;border-radius:13px;background:#eef1fb;display:flex;align-items:center;justify-content:center;font-size:22px;flex:none}
+  .linea-card h3{font-family:var(--sora);font-size:21px;font-weight:700;letter-spacing:-.02em}
+  .linea-card .sub{color:var(--muted);font-size:13px}
+  .linea-card .lc-media{border-radius:16px;overflow:hidden;height:180px;margin-bottom:18px;background:linear-gradient(150deg,#eef2fc 0%,#dde6fb 55%,#c9d7f8 100%);display:flex;align-items:center;justify-content:center}
+  .linea-card .lc-media img{width:100%;height:100%;object-fit:cover}
+  .linea-card .lc-media svg{width:74px;height:74px;opacity:.9;stroke:var(--blue)}
+  .linea-card p.desc{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+  .linea-card .lc-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--line)}
+  .precio2{font-family:var(--sora);font-weight:800;font-size:19px}
+  .precio2 small{font-weight:500;font-size:12px;color:var(--muted)}
+  @media(max-width:860px){.lineas-grid{grid-template-columns:1fr}}
+
+  /* confianza / valores banda clara */
+  .confianza{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .confianza .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:44px}
+  .conf-item{display:flex;gap:16px;align-items:flex-start}
+  .conf-item .ic{flex:none;width:42px;height:42px;border-radius:12px;background:#eef1fb;display:flex;align-items:center;justify-content:center;color:var(--blue)}
+  .conf-item .ic svg{width:21px;height:21px}
+  .conf-item h4{font-family:var(--sora);font-size:15.5px;font-weight:700;margin-bottom:4px}
+  .conf-item p{font-size:13.5px;color:var(--muted)}
+  @media(max-width:900px){.confianza .grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.confianza .grid{grid-template-columns:1fr}}
+
+  /* aviso / lista de espera */
+  .aviso-catalogo{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:center;background:var(--navy);border-radius:28px;padding:52px;color:#fff;box-shadow:var(--shadow-lg)}
+  .aviso-catalogo h2{color:#fff;margin-bottom:14px;font-size:clamp(24px,2.6vw,34px)}
+  .aviso-catalogo .bajada{color:#b9c1d8}
+  .hint-form{font-size:12.5px;color:#8a96bd;margin-top:12px}
+  .badge-wait{display:inline-flex;align-items:center;gap:8px;background:#24325f;border:1px solid #33427c;border-radius:999px;padding:7px 15px;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#b9c9ff}
+  @media(max-width:860px){.aviso-catalogo{grid-template-columns:1fr;padding:36px 28px}}
+
+  /* footer */
+  footer{background:var(--ink);color:#8a94ad;padding:64px 0 40px;margin-top:0}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+  footer .brand{color:#fff;margin-bottom:16px}
+  footer p{font-size:13.5px;line-height:1.7;max-width:300px}
+  footer h5{font-family:var(--sora);color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+  footer ul{list-style:none}
+  footer li{margin-bottom:10px}
+  footer a{text-decoration:none;font-size:14px;color:#9aa4c0}
+  footer a:hover{color:#fff}
+  .foot-bottom{margin-top:52px;padding-top:24px;border-top:1px solid #1d2647;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12.5px}
+  @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+  /* preguntas frecuentes */
+  .faq{max-width:760px;margin-top:44px}
+  .faq-item{border-bottom:1px solid var(--line);padding:22px 0}
+  .faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--sora);font-weight:700;font-size:16.5px;letter-spacing:-.01em}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary .plus{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--blue);transition:.2s}
+  .faq-item[open] summary .plus{transform:rotate(45deg);background:var(--ink);color:#fff;border-color:var(--ink)}
+  .faq-item p{color:var(--muted);font-size:14.5px;margin-top:14px;max-width:640px}
+
+  /* aparición suave al hacer scroll */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.on{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><img src="logo-onelix.png" alt=""><span>Onelix<em>Global</em></span></a>
+    <nav class="nav-links">
+      <a href="#marca">La marca</a>
+      <a href="#digital">Guías digitales</a>
+      <a href="#fisico">Catálogo físico</a>
+      <a href="#faq">Preguntas</a>
+      <a class="nav-cta" href="#aviso">Avisarme</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO: presenta la MARCA, no un producto -->
+<div class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>OnelixGlobal — marca en lanzamiento</span>
+      <h1>Bienestar real.<span class="line2 accent">Sin humo.</span></h1>
+      <p class="lead">OnelixGlobal es una marca de bienestar físico honesto — <strong>guías digitales y catálogo físico</strong> pensados para el mismo objetivo: menos molestias del día a día, sin promesas milagro. Todo lo que verás aquí lo probamos nosotros antes de ofrecértelo.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#digital">Ver guías digitales
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#fisico">Ver catálogo físico</a>
+      </div>
+      <p class="hero-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Lanzamiento muy pronto · Sin spam · Serás de los primeros en saberlo
+      </p>
+    </div>
+
+    <div class="stage">
+      <div class="orb a"></div><div class="orb b"></div>
+      <div class="pcard">
+        <div class="pcard-tags"><span class="pill blue">La marca, de un vistazo</span></div>
+        <h3>Nuestras líneas</h3>
+        <div class="linea-mini">
+          <span class="linea-mini-ic">📄</span>
+          <div><strong>Guías digitales</strong><span class="sub">PDF de bienestar — $8,90</span></div>
+          <span class="pill green">Muy pronto</span>
+        </div>
+        <div class="linea-mini">
+          <span class="linea-mini-ic">🛍️</span>
+          <div><strong>Catálogo físico</strong><span class="sub">Postura y descanso · COD</span></div>
+          <span class="pill blue">Muy pronto</span>
+        </div>
+      </div>
+      <div class="float f1"><i></i>2 líneas de negocio</div>
+      <div class="float f2"><i></i>Colombia · México · Global</div>
+    </div>
+  </div>
+</div>
+
+<!-- DECLARACIÓN: qué es y qué significa la marca -->
+<section class="declaracion" id="marca">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Qué es OnelixGlobal</span>
+      <h2>Menos fórmulas milagro. Más honestidad que funciona.</h2>
+      <p class="bajada">OnelixGlobal nace para acercar bienestar físico real y accesible a quien lo necesita, sin promesas de "postura perfecta en 7 días" ni letra pequeña. Empezamos desde cero, sin publicidad pagada, construyendo cada guía y cada producto a partir de lo que de verdad funciona — probado antes de venderlo. Da igual si estás en Colombia, en México o en cualquier otra parte: el compromiso es el mismo en cada línea que suma la marca — honestidad en lo que cuesta, en lo que hace y en cómo se entrega.</p>
+    </div>
+    <p class="pull">"Primero demostramos que un producto merece estar aquí. Después lo publicamos."</p>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="wrap">
+    <span class="kicker">Cómo funciona</span>
+    <h2>Tres pasos. Sin complicaciones.</h2>
+    <div class="pasos">
+      <div class="paso"><span class="num">01</span><h3>Apúntate en segundos</h3><p>Deja tu correo en la línea que te interese —guía digital, catálogo físico o ambas— y te avisamos en cuanto esté disponible.</p></div>
+      <div class="paso"><span class="num">02</span><h3>Te avisamos y compras</h3><p>Pago seguro con tarjeta en lo digital; contra entrega en lo físico. Sin sorpresas de precio a última hora.</p></div>
+      <div class="paso"><span class="num">03</span><h3>Lo disfrutas</h3><p>Descarga inmediata en las guías; entrega en Colombia y México en el catálogo físico.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUESTRAS LÍNEAS: el hub donde vivirán todas las formas de ganar dinero -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Nuestras líneas</span>
+    <h2>Todo lo que ofrece la marca, en un mismo sitio</h2>
+    <p class="bajada">Cada línea es una forma distinta en la que OnelixGlobal cumple la misma promesa: bienestar real, probado antes de venderlo.</p>
+
+    <div class="lineas-grid">
+
+      <!-- LÍNEA DIGITAL -->
+      <div class="linea-card reveal" id="digital">
+        <div class="lc-media">
+          <img src="portada_guia.png" alt="Portada de la guía Cuello y hombros sin tensión">
+        </div>
+        <div class="lc-top">
+          <span class="lc-ic">📄</span>
+          <div><h3>Guías digitales</h3><span class="sub">PDF · descarga inmediata · global</span></div>
+        </div>
+        <p class="desc">Nuestra primera guía: <strong>15 días sin dolor de cuello y hombros</strong>, con rutinas de 10-15 minutos para la tensión que dejan las pantallas — sin gadgets milagro. Incluye bono de rutina exprés de 5 minutos.</p>
+        <div class="lc-foot">
+          <div class="precio2">$ 8,90 <small>USD · pago único</small></div>
+          <a class="btn btn-solid btn-sm" href="mailto:info@onelixglobal.com?subject=Quiero%20la%20gu%C3%ADa%20de%20cuello%20y%20hombros&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20pueda%20comprar%20la%20gu%C3%ADa%20%22Cuello%20y%20hombros%20sin%20tensi%C3%B3n%22.%20Mi%20nombre%20es%3A%20">Apúntate para el lanzamiento</a>
+        </div>
+      </div>
+
+      <!-- LÍNEA FÍSICA -->
+      <div class="linea-card reveal" id="fisico">
+        <div class="lc-media">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="lc-top">
+          <span class="lc-ic">🛍️</span>
+          <div><h3>Catálogo físico</h3><span class="sub">Postura y descanso · contra entrega · LATAM</span></div>
+        </div>
+        <p class="desc">Productos de bienestar físico —correctores de postura, masajeadores cervicales, accesorios para dormir mejor— en selección y prueba de calidad con proveedor local. Pago <strong>contra entrega</strong> en Colombia, México próximamente.</p>
+        <div class="lc-foot">
+          <span class="pill blue">En selección de producto</span>
+          <a class="btn btn-ghost btn-sm" href="mailto:info@onelixglobal.com?subject=Av%C3%ADsenme%20del%20cat%C3%A1logo%20f%C3%ADsico&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20est%C3%A9%20disponible%20el%20cat%C3%A1logo%20f%C3%ADsico%20de%20OnelixGlobal.%20Mi%20nombre%20es%3A%20">Avisarme cuando llegue</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALORES / CONFIANZA -->
+<section class="confianza">
+  <div class="wrap">
+    <span class="kicker">Cómo trabajamos</span>
+    <h2>La confianza se gana, no se pide</h2>
+    <div class="grid">
+      <div class="conf-item reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <div><h4>Honestidad ante todo</h4><p>Nada de "resultados milagro" ni letra pequeña: te contamos lo que un producto o guía puede y no puede hacer.</p></div>
+      </div>
+      <div class="conf-item reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h9l7 7v9H4V4z"/><path d="M4 13h5v7M13 4v9h7"/></svg></span>
+        <div><h4>Probado antes de vender</h4><p>Nada llega al catálogo sin que lo hayamos comprobado nosotros primero.</p></div>
+      </div>
+      <div class="conf-item reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M5 7l1 12h12l1-12M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg></span>
+        <div><h4>Pago seguro</h4><p>Contra entrega en lo físico, descarga garantizada en lo digital. Precio claro desde el primer clic.</p></div>
+      </div>
+      <div class="conf-item reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
+        <div><h4>Crecimiento sin atajos</h4><p>Sin deuda, sin publicidad pagada: cada línea nueva se abre solo cuando la anterior ha demostrado que funciona.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section id="faq">
+  <div class="wrap">
+    <span class="kicker">Preguntas frecuentes</span>
+    <h2>Antes de que preguntes</h2>
+    <div class="faq">
+      <details class="faq-item reveal" open>
+        <summary>¿Cuándo puedo comprar la guía digital o el catálogo físico?<span class="plus">+</span></summary>
+        <p>Muy pronto. Ambas líneas están en la recta final; apúntate con tu correo y te avisamos en el mismo momento en que se abra la compra.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Cómo se paga?<span class="plus">+</span></summary>
+        <p>Las guías digitales se pagan con tarjeta y se descargan al instante. El catálogo físico se paga contra entrega en Colombia (México próximamente), sin adelantar dinero.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿A dónde envían el catálogo físico?<span class="plus">+</span></summary>
+        <p>De momento a Colombia, con México como siguiente mercado. Las guías digitales se venden a cualquier país.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Por qué apuntarme antes de que esté disponible?<span class="plus">+</span></summary>
+        <p>Para ser de los primeros en poder comprar y recibir el aviso exacto del lanzamiento, sin tener que estar revisando la web cada semana. Sin spam, solo avisos de OnelixGlobal.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- AVISO / LISTA DE ESPERA -->
+<section id="aviso">
+  <div class="wrap">
+    <div class="aviso-catalogo">
+      <div>
+        <span class="badge-wait">Lanzamiento muy pronto</span>
+        <h2 style="margin-top:18px">Sé el primero en saberlo.</h2>
+        <p class="bajada">La guía digital y el catálogo físico están en la recta final — escríbenos y te avisamos por correo en cuanto puedas comprar cualquiera de las dos.</p>
+        <div class="hero-ctas" style="margin-top:26px">
+          <a class="btn btn-solid" href="mailto:info@onelixglobal.com?subject=Av%C3%ADsenme%20cuando%20est%C3%A9%20disponible&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20est%C3%A9%20disponible%20la%20gu%C3%ADa%20digital%20y%2Fo%20el%20cat%C3%A1logo%20de%20productos%20f%C3%ADsicos.%20Mi%20nombre%20es%3A%20">Avisarme por correo</a>
+          <a class="btn btn-ghost" style="color:#fff;border-color:#33427c" href="https://onelixglobal.gumroad.com" target="_blank" rel="noopener">Seguir en Gumroad</a>
+        </div>
+        <p class="hint-form">Sin spam, prometido — solo avisos de OnelixGlobal.</p>
+      </div>
+      <div class="pull" style="border-color:#8fb0ff;color:#dfe6ff">"Bienestar real, sin humo: esa es la promesa detrás de cada línea de OnelixGlobal."</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#inicio"><img src="logo-onelix.png" alt=""><span style="color:#fff">Onelix<em>Global</em></span></a>
+        <p>La marca de bienestar físico honesto: guías digitales y catálogo físico para LATAM y el mundo, probados antes de venderlos.</p>
+      </div>
+      <div>
+        <h5>Líneas</h5>
+        <ul><li><a href="#digital">Guías digitales (muy pronto)</a></li><li><a href="#fisico">Catálogo físico (muy pronto)</a></li></ul>
+      </div>
+      <div>
+        <h5>Marca</h5>
+        <ul><li><a href="#marca">Qué es OnelixGlobal</a></li><li><a href="#como-funciona">Cómo funciona</a></li><li><a href="#aviso">Avisarme del lanzamiento</a></li></ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul><li><a href="mailto:info@onelixglobal.com">info@onelixglobal.com</a></li><li><a href="https://www.onelixglobal.com" target="_blank" rel="noopener">www.onelixglobal.com</a></li><li><span style="font-size:14px">🇨🇴 Colombia · 🇲🇽 México (pronto)</span></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 OnelixGlobal. Todos los derechos reservados.</span>
+      <span>Diseño y operación propios · Hecho para LATAM</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) { els.forEach(function (e) { e.classList.add('on'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('on'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (e) { io.observe(e); });
+  // red de seguridad: si algo falla o tarda, no se queda nada invisible
+  setTimeout(function () { els.forEach(function (e) { e.classList.add('on'); }); }, 1500);
+})();
+</script>
+</body>
+</html>
