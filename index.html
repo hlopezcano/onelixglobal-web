@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OnelixGlobal | Bienestar real, sin humo — guías digitales y catálogo físico</title>
-<meta name="description" content="OnelixGlobal es la marca de bienestar físico honesto: guías digitales y catálogo físico (postura, descanso) probados antes de venderlos. Lanzamiento muy pronto — apúntate y sé el primero en saberlo.">
+<title>OnelixGlobal | Masajeador cervical contra entrega en Colombia + guías digitales</title>
+<meta name="description" content="OnelixGlobal: masajeador cervical eléctrico con pago contra entrega en Colombia y guías digitales de bienestar, probados antes de venderlos. Sin publicidad pagada, contenido real en TikTok e Instagram.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://onelixglobal.com/">
 <link rel="icon" href="logo-onelix.png" type="image/png">
@@ -15,11 +15,11 @@
 <meta property="og:site_name" content="OnelixGlobal">
 <meta property="og:url" content="https://onelixglobal.com/">
 <meta property="og:title" content="OnelixGlobal | Bienestar real, sin humo">
-<meta property="og:description" content="Guías digitales y catálogo físico de bienestar, probados antes de venderlos. Sin fórmulas milagro. Lanzamiento muy pronto.">
+<meta property="og:description" content="Masajeador cervical con pago contra entrega en Colombia y guías digitales de bienestar, probados antes de venderlos.">
 <meta property="og:image" content="https://onelixglobal.com/portada_guia.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OnelixGlobal | Bienestar real, sin humo">
-<meta name="twitter:description" content="Guías digitales y catálogo físico de bienestar, probados antes de venderlos. Lanzamiento muy pronto.">
+<meta name="twitter:description" content="Masajeador cervical con pago contra entrega en Colombia y guías digitales de bienestar, probados antes de venderlos.">
 <meta name="twitter:image" content="https://onelixglobal.com/portada_guia.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,23 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Masajeador Cervical Eléctrico Vibración y Calor",
+  "description": "Masajeador cervical eléctrico con vibración y calor para aliviar la tensión de cuello y hombros. Pago contra entrega en Colombia.",
+  "brand": { "@type": "Brand", "name": "OnelixGlobal" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://onelixglobal.com/#fisico",
+    "priceCurrency": "COP",
+    "price": "89900",
+    "availability": "https://schema.org/PreOrder",
+    "areaServed": "CO"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
@@ -78,6 +95,11 @@
       "@type": "Question",
       "name": "¿Por qué apuntarme antes de que esté disponible?",
       "acceptedAnswer": { "@type": "Answer", "text": "Para ser de los primeros en poder comprar y recibir el aviso exacto del lanzamiento, sin tener que estar revisando la web cada semana. Sin spam, solo avisos de OnelixGlobal." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda la entrega y puedo devolver el producto?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La entrega estimada en Colombia es de 2 a 5 días hábiles. Si cambias de opinión, tienes 5 días hábiles desde la entrega para devolverlo sin dar explicaciones, según la Ley 1480 de 2011 (Estatuto del Consumidor)." }
     }
   ]
 }
@@ -120,7 +142,14 @@
   .nav-links a:hover{color:var(--ink);background:#ebe8e0}
   .nav-cta{font-family:var(--sora);font-weight:600;font-size:14px;background:var(--ink);color:#fff!important;padding:11px 18px!important;border-radius:999px}
   .nav-cta:hover{background:var(--blue)}
-  @media(max-width:840px){.nav-links a:not(.nav-cta){display:none}}
+  @media(max-width:840px){.nav-links a:not(.nav-cta):not(.nav-social){display:none}}
+  .nav-social{display:flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0!important;border-radius:50%;color:var(--ink)!important}
+  .nav-social:hover{background:#ebe8e0}
+  .nav-social svg{width:17px;height:17px}
+  .social-row{display:flex;gap:10px;margin-top:16px}
+  .social-row a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#1d2647;color:#fff}
+  .social-row a:hover{background:var(--blue)}
+  .social-row svg{width:17px;height:17px}
 
   /* ---------- hero ---------- */
   .hero{padding:84px 0 90px;position:relative;overflow:hidden}
@@ -212,6 +241,30 @@
   .precio2{font-family:var(--sora);font-weight:800;font-size:19px}
   .precio2 small{font-weight:500;font-size:12px;color:var(--muted)}
   @media(max-width:860px){.lineas-grid{grid-template-columns:1fr}}
+  .linea-card-h{flex-direction:row;align-items:stretch;gap:24px;padding:24px}
+  .linea-card-h .lc-h-media{width:120px;flex:none;border-radius:14px;overflow:hidden}
+  .linea-card-h .lc-h-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .linea-card-h .lc-h-body{display:flex;flex-direction:column;flex:1;min-width:0}
+  .linea-card-h .lc-top{margin-bottom:8px}
+  .linea-card-h p.desc{margin-bottom:16px}
+  @media(max-width:560px){.linea-card-h{flex-direction:column}.linea-card-h .lc-h-media{width:100%;height:150px}}
+
+  /* PRODUCTO FÍSICO — sección destacada (prioridad actual del negocio) */
+  .feature{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:44px;box-shadow:var(--shadow-sm);margin-top:44px}
+  .feature-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .feature-visual{background:linear-gradient(150deg,#eef2fc 0%,#dde6fb 55%,#c9d7f8 100%);border-radius:22px;padding:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:260px}
+  .feature-visual .fv-price{font-family:var(--sora);font-weight:800;font-size:28px}
+  .feature-visual .fv-price small{font-weight:500;font-size:13px;color:var(--muted);display:block;margin-top:2px}
+  .fv-chips{display:flex;gap:14px;margin-bottom:24px}
+  .fv-chip{display:flex;flex-direction:column;align-items:center;gap:9px;background:#fff;border-radius:16px;padding:18px 22px;box-shadow:var(--shadow-sm);font-family:var(--sora);font-size:12.5px;font-weight:700;color:var(--ink)}
+  .fv-chip svg{width:26px;height:26px;stroke:var(--blue)}
+  .benefits{list-style:none;margin:20px 0 26px}
+  .benefits li{display:flex;gap:11px;align-items:flex-start;padding:8px 0;font-size:14.5px;color:var(--ink)}
+  .benefits li svg{flex:none;width:18px;height:18px;stroke:var(--green);margin-top:2px}
+  .trust-mini{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0 28px}
+  .trust-mini div{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 13px}
+  .trust-mini svg{flex:none;width:17px;height:17px;stroke:var(--blue)}
+  @media(max-width:900px){.feature{padding:30px}.feature-grid{grid-template-columns:1fr;gap:30px}.trust-mini{grid-template-columns:1fr}}
 
   /* confianza / valores banda clara */
   .confianza{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -231,6 +284,13 @@
   .hint-form{font-size:12.5px;color:#8a96bd;margin-top:12px}
   .badge-wait{display:inline-flex;align-items:center;gap:8px;background:#24325f;border:1px solid #33427c;border-radius:999px;padding:7px 15px;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#b9c9ff}
   @media(max-width:860px){.aviso-catalogo{grid-template-columns:1fr;padding:36px 28px}}
+
+  /* banda "contenido real" — enlaza con la estrategia de TikTok/IG orgánico */
+  .contenido{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
+  .contenido .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .contenido p{font-size:15px;color:var(--muted);max-width:520px}
+  .contenido p strong{color:var(--ink)}
+  .contenido .social-row a{background:var(--ink)}
 
   /* footer */
   footer{background:var(--ink);color:#8a94ad;padding:64px 0 40px;margin-top:0}
@@ -272,48 +332,52 @@
       <a href="#digital">Guías digitales</a>
       <a href="#fisico">Catálogo físico</a>
       <a href="#faq">Preguntas</a>
+      <a class="nav-social" href="https://www.tiktok.com/@onelixglobal" target="_blank" rel="noopener" aria-label="OnelixGlobal en TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.2c-.9-.8-1.4-1.9-1.5-3.2h-3.2v13.6c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.6c-.3 0-.5-.1-.8-.1-3.2 0-5.9 2.6-5.9 5.9s2.6 5.9 5.9 5.9 5.9-2.6 5.9-5.9V8.7c1.2.9 2.7 1.4 4.3 1.4V6.9c-1 0-1.9-.3-2.8-1.7z"/></svg></a>
+      <a class="nav-social" href="https://www.instagram.com/onelixglobal/" target="_blank" rel="noopener" aria-label="OnelixGlobal en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
       <a class="nav-cta" href="#aviso">Avisarme</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO: presenta la MARCA, no un producto -->
+<!-- HERO: ahora lidera con el producto físico, que es el frente activo -->
 <div class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot"></span>OnelixGlobal — marca en lanzamiento</span>
-      <h1>Bienestar real.<span class="line2 accent">Sin humo.</span></h1>
-      <p class="lead">OnelixGlobal es una marca de bienestar físico honesto — <strong>guías digitales y catálogo físico</strong> pensados para el mismo objetivo: menos molestias del día a día, sin promesas milagro. Todo lo que verás aquí lo probamos nosotros antes de ofrecértelo.</p>
+      <span class="eyebrow"><span class="dot"></span>Nuestro primer producto está en camino a tienda propia</span>
+      <h1>Se acabó el cuello agarrotado.<span class="line2 accent">Pagas cuando lo tienes en mano.</span></h1>
+      <p class="lead">El <strong>masajeador cervical eléctrico</strong> de OnelixGlobal llega muy pronto a Colombia con <strong>pago contra entrega</strong> — sin tarjeta, sin adelantar nada. Lo probamos y elegimos nosotros mismos, igual que cada guía digital que publicamos.</p>
       <div class="hero-ctas">
-        <a class="btn btn-solid" href="#digital">Ver guías digitales
+        <a class="btn btn-solid" href="#fisico">Ver el masajeador cervical
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#fisico">Ver catálogo físico</a>
+        <a class="btn btn-ghost" href="#digital">Ver guía digital</a>
       </div>
       <p class="hero-note">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-        Lanzamiento muy pronto · Sin spam · Serás de los primeros en saberlo
+        Probado por nosotros antes de publicarlo · nos ves probarlo en @onelixglobal
       </p>
     </div>
 
     <div class="stage">
       <div class="orb a"></div><div class="orb b"></div>
       <div class="pcard">
-        <div class="pcard-tags"><span class="pill blue">La marca, de un vistazo</span></div>
-        <h3>Nuestras líneas</h3>
+        <div class="pcard-tags"><span class="pill blue">Masajeador cervical eléctrico</span></div>
+        <h3>$ 89.900 COP</h3>
         <div class="linea-mini">
-          <span class="linea-mini-ic">📄</span>
-          <div><strong>Guías digitales</strong><span class="sub">PDF de bienestar — $8,90</span></div>
-          <span class="pill green">Muy pronto</span>
+          <span class="linea-mini-ic">🚚</span>
+          <div><strong>Pago contra entrega</strong><span class="sub">Sin tarjeta, sin adelantos</span></div>
         </div>
         <div class="linea-mini">
-          <span class="linea-mini-ic">🛍️</span>
-          <div><strong>Catálogo físico</strong><span class="sub">Postura y descanso · COD</span></div>
-          <span class="pill blue">Muy pronto</span>
+          <span class="linea-mini-ic">⏱️</span>
+          <div><strong>2-5 días hábiles</strong><span class="sub">Tiempo estimado de entrega</span></div>
+        </div>
+        <div class="linea-mini">
+          <span class="linea-mini-ic">↩️</span>
+          <div><strong>5 días para devolver</strong><span class="sub">Si cambias de opinión</span></div>
         </div>
       </div>
-      <div class="float f1"><i></i>2 líneas de negocio</div>
-      <div class="float f2"><i></i>Colombia · México · Global</div>
+      <div class="float f1"><i></i>Probado por nosotros primero</div>
+      <div class="float f2"><i></i>Muy pronto en tienda.onelixglobal.com</div>
     </div>
   </div>
 </div>
@@ -343,47 +407,80 @@
   </div>
 </section>
 
-<!-- NUESTRAS LÍNEAS: el hub donde vivirán todas las formas de ganar dinero -->
+<!-- CONTENIDO REAL: enlaza con la estrategia de TikTok/IG orgánico, sin publicidad pagada -->
+<section class="contenido">
+  <div class="wrap">
+    <p><strong>Cero publicidad pagada.</strong> Todo lo que vas a ver aquí primero lo mostramos en vídeo, tal cual es — sin edición que prometa lo que el producto no da.</p>
+    <div class="social-row">
+      <a href="https://www.tiktok.com/@onelixglobal" target="_blank" rel="noopener" aria-label="OnelixGlobal en TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.2c-.9-.8-1.4-1.9-1.5-3.2h-3.2v13.6c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.6c-.3 0-.5-.1-.8-.1-3.2 0-5.9 2.6-5.9 5.9s2.6 5.9 5.9 5.9 5.9-2.6 5.9-5.9V8.7c1.2.9 2.7 1.4 4.3 1.4V6.9c-1 0-1.9-.3-2.8-1.7z"/></svg></a>
+      <a href="https://www.instagram.com/onelixglobal/" target="_blank" rel="noopener" aria-label="OnelixGlobal en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO FÍSICO: sección destacada, es el frente activo del negocio ahora -->
+<section id="fisico">
+  <div class="wrap">
+    <span class="kicker">Catálogo físico · Colombia</span>
+    <h2>Nuestro primer producto, listo para salir a la calle</h2>
+    <p class="bajada">Elegido entre decenas de candidatos por un criterio simple: que de verdad se note la diferencia después de 10 minutos de uso. Muy pronto en nuestra propia tienda, <strong>tienda.onelixglobal.com</strong>.</p>
+
+    <div class="feature reveal">
+      <div class="feature-grid">
+        <div class="feature-visual">
+          <div class="fv-chips">
+            <div class="fv-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-3 2.5-3 4 0s2.5 3 4 0 2.5-3 4 0 2.5 3 4 0 2.5-3 4 0"/></svg>Vibración</div>
+            <div class="fv-chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-2 3-4 5-4 8a4 4 0 008 0c0-1.2-.5-2.2-1-3 .1 1-.3 1.8-1 2.3.3-2-.7-4.5-2-7.3z"/></svg>Calor</div>
+          </div>
+          <div class="fv-price">$ 89.900 <small>COP · pago contra entrega</small></div>
+        </div>
+        <div>
+          <h3 style="font-family:var(--sora);font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px">Masajeador cervical eléctrico — vibración y calor</h3>
+          <p style="color:var(--muted);font-size:14.5px">Pensado para quien pasa horas frente a una pantalla y termina el día con el cuello agarrotado. Se coloca como un collar y combina vibración y calor suave para soltar la tensión de cuello, hombros y parte alta de la espalda.</p>
+
+          <ul class="benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>10-15 minutos al día, sin cita previa ni fisioterapia</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Ligero, fácil de usar en la oficina o en casa</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Lo probamos nosotros antes de venderlo — sin promesas médicas</li>
+          </ul>
+
+          <div class="trust-mini">
+            <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M5 7l1 12h12l1-12M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg>Pago contra entrega, sin adelantar nada</div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Entrega en 2-5 días hábiles</div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h9l7 7v9H4V4z"/><path d="M4 13h5v7M13 4v9h7"/></svg>5 días para devolverlo, sin dar explicaciones</div>
+            <div><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>Garantía por defectos de fabricación</div>
+          </div>
+
+          <a class="btn btn-solid" href="mailto:info@onelixglobal.com?subject=Av%C3%ADsenme%20del%20cat%C3%A1logo%20f%C3%ADsico&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20est%C3%A9%20disponible%20el%20masajeador%20cervical%20de%20OnelixGlobal.%20Mi%20nombre%20es%3A%20">Avisarme cuando esté disponible</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUÍAS DIGITALES: segunda línea, más compacta -->
 <section>
   <div class="wrap">
-    <span class="kicker">Nuestras líneas</span>
-    <h2>Todo lo que ofrece la marca, en un mismo sitio</h2>
-    <p class="bajada">Cada línea es una forma distinta en la que OnelixGlobal cumple la misma promesa: bienestar real, probado antes de venderlo.</p>
+    <span class="kicker">Guías digitales · Global</span>
+    <h2>También en formato PDF, disponible en cualquier país</h2>
 
-    <div class="lineas-grid">
-
-      <!-- LÍNEA DIGITAL -->
-      <div class="linea-card reveal" id="digital">
-        <div class="lc-media">
+    <div class="lineas-grid" style="grid-template-columns:1fr;max-width:640px">
+      <div class="linea-card linea-card-h reveal" id="digital">
+        <div class="lc-h-media">
           <img src="portada_guia.png" alt="Portada de la guía Cuello y hombros sin tensión">
         </div>
-        <div class="lc-top">
-          <span class="lc-ic">📄</span>
-          <div><h3>Guías digitales</h3><span class="sub">PDF · descarga inmediata · global</span></div>
-        </div>
-        <p class="desc">Nuestra primera guía: <strong>15 días sin dolor de cuello y hombros</strong>, con rutinas de 10-15 minutos para la tensión que dejan las pantallas — sin gadgets milagro. Incluye bono de rutina exprés de 5 minutos.</p>
-        <div class="lc-foot">
-          <div class="precio2">$ 8,90 <small>USD · pago único</small></div>
-          <a class="btn btn-solid btn-sm" href="mailto:info@onelixglobal.com?subject=Quiero%20la%20gu%C3%ADa%20de%20cuello%20y%20hombros&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20pueda%20comprar%20la%20gu%C3%ADa%20%22Cuello%20y%20hombros%20sin%20tensi%C3%B3n%22.%20Mi%20nombre%20es%3A%20">Apúntate para el lanzamiento</a>
-        </div>
-      </div>
-
-      <!-- LÍNEA FÍSICA -->
-      <div class="linea-card reveal" id="fisico">
-        <div class="lc-media">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
-        <div class="lc-top">
-          <span class="lc-ic">🛍️</span>
-          <div><h3>Catálogo físico</h3><span class="sub">Postura y descanso · contra entrega · LATAM</span></div>
-        </div>
-        <p class="desc">Productos de bienestar físico —correctores de postura, masajeadores cervicales, accesorios para dormir mejor— en selección y prueba de calidad con proveedor local. Pago <strong>contra entrega</strong> en Colombia, México próximamente.</p>
-        <div class="lc-foot">
-          <span class="pill blue">En selección de producto</span>
-          <a class="btn btn-ghost btn-sm" href="mailto:info@onelixglobal.com?subject=Av%C3%ADsenme%20del%20cat%C3%A1logo%20f%C3%ADsico&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20est%C3%A9%20disponible%20el%20cat%C3%A1logo%20f%C3%ADsico%20de%20OnelixGlobal.%20Mi%20nombre%20es%3A%20">Avisarme cuando llegue</a>
+        <div class="lc-h-body">
+          <div class="lc-top">
+            <span class="lc-ic">📄</span>
+            <div><h3>Cuello y hombros sin tensión</h3><span class="sub">PDF · descarga inmediata · global</span></div>
+          </div>
+          <p class="desc">Guía de <strong>15 días</strong> con rutinas de 10-15 minutos para la tensión que dejan las pantallas — sin gadgets milagro. Incluye bono de rutina exprés de 5 minutos.</p>
+          <div class="lc-foot">
+            <div class="precio2">$ 8,90 <small>USD · pago único</small></div>
+            <a class="btn btn-solid btn-sm" href="mailto:info@onelixglobal.com?subject=Quiero%20la%20gu%C3%ADa%20de%20cuello%20y%20hombros&body=Hola%2C%20quiero%20que%20me%20aviséis%20en%20cuanto%20pueda%20comprar%20la%20gu%C3%ADa%20%22Cuello%20y%20hombros%20sin%20tensi%C3%B3n%22.%20Mi%20nombre%20es%3A%20">Apúntate para el lanzamiento</a>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -436,6 +533,10 @@
         <summary>¿Por qué apuntarme antes de que esté disponible?<span class="plus">+</span></summary>
         <p>Para ser de los primeros en poder comprar y recibir el aviso exacto del lanzamiento, sin tener que estar revisando la web cada semana. Sin spam, solo avisos de OnelixGlobal.</p>
       </details>
+      <details class="faq-item reveal">
+        <summary>¿Cuánto tarda la entrega y puedo devolver el producto?<span class="plus">+</span></summary>
+        <p>La entrega estimada en Colombia es de 2 a 5 días hábiles. Si cambias de opinión, tienes 5 días hábiles desde la entrega para devolverlo sin dar explicaciones, según la Ley 1480 de 2011 (Estatuto del Consumidor).</p>
+      </details>
     </div>
   </div>
 </section>
@@ -466,10 +567,14 @@
       <div>
         <a class="brand" href="#inicio"><img src="logo-onelix.png" alt=""><span style="color:#fff">Onelix<em>Global</em></span></a>
         <p>La marca de bienestar físico honesto: guías digitales y catálogo físico para LATAM y el mundo, probados antes de venderlos.</p>
+        <div class="social-row">
+          <a href="https://www.tiktok.com/@onelixglobal" target="_blank" rel="noopener" aria-label="OnelixGlobal en TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.2c-.9-.8-1.4-1.9-1.5-3.2h-3.2v13.6c0 1.5-1.2 2.7-2.7 2.7s-2.7-1.2-2.7-2.7 1.2-2.7 2.7-2.7c.3 0 .6 0 .8.1V9.6c-.3 0-.5-.1-.8-.1-3.2 0-5.9 2.6-5.9 5.9s2.6 5.9 5.9 5.9 5.9-2.6 5.9-5.9V8.7c1.2.9 2.7 1.4 4.3 1.4V6.9c-1 0-1.9-.3-2.8-1.7z"/></svg></a>
+          <a href="https://www.instagram.com/onelixglobal/" target="_blank" rel="noopener" aria-label="OnelixGlobal en Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        </div>
       </div>
       <div>
         <h5>Líneas</h5>
-        <ul><li><a href="#digital">Guías digitales (muy pronto)</a></li><li><a href="#fisico">Catálogo físico (muy pronto)</a></li></ul>
+        <ul><li><a href="#digital">Guías digitales (muy pronto)</a></li><li><a href="#fisico">Catálogo físico (muy pronto)</a></li><li><span style="font-size:14px">tienda.onelixglobal.com <em style="font-style:normal;color:#5c6690">(muy pronto)</em></span></li></ul>
       </div>
       <div>
         <h5>Marca</h5>
