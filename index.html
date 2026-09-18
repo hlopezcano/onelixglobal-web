@@ -335,29 +335,20 @@
         <h2 style="margin-top:18px">Sé el primero en saberlo.</h2>
         <p class="bajada">El catálogo físico está en la recta final — déjanos tu correo y te avisamos en cuanto se abra la compra. La guía digital ya puedes comprarla ahora mismo en Gumroad.</p>
 
-        <!--
-          NOTA PARA HECTOR — conectar con Brevo:
-          1) Crea tu cuenta en https://www.brevo.com y una lista "Lista de espera OnelixGlobal".
-          2) Contactos → Formularios → crea un "formulario clásico" con un campo EMAIL
-             y una casilla de consentimiento SIN marcar por defecto (igual que aquí abajo).
-          3) Brevo te da un bloque <form action="https://XXXXX.sibforms.com/serve/..." ...>
-             con campos ocultos (locale, email_address_check, csrf, etc.).
-          4) Sustituye el atributo action="[COMPLETAR..." de aquí abajo por esa URL, y pega
-             justo antes del botón "Avisarme por correo" los <input type="hidden"> que te dé Brevo.
-             Si no te aclaras, pégamelo en el chat y lo dejo conectado.
-        -->
-        <form class="signup-form" action="[COMPLETAR: pegar aquí la URL del formulario de Brevo]" method="POST">
+        <form class="signup-form" action="https://f0f50502.sibforms.com/serve/MUIFAGUjydLISe01JVvC0A-glQv75vJg96FN0Aodt0W_r6bCxYZp1-r1QeixHccvAMv_6iTBI1BSN9xjdj4JOpQoBni7iKd7IfSAKilj783zdJCKOTN5j5aOt6SlUXEE-xxqnF8thPtELhRjadERotOJxTKJIMIzGWGhsqDAKufY3uzecKO0PJ9HetTA8tDdFaRKmUaZtuGYs77cyA==" method="POST">
           <div class="signup-row">
             <input type="email" name="EMAIL" placeholder="tu@email.com" required aria-label="Tu correo electrónico">
           </div>
           <div class="signup-consent">
-            <input type="checkbox" id="signup-consent-check" name="OPT_IN" required>
+            <input type="checkbox" id="signup-consent-check" required>
             <label for="signup-consent-check">Acepto que OnelixGlobal use mi correo solo para avisarme del lanzamiento del catálogo físico, según la <a href="privacidad.html">política de privacidad</a>. Puedo darme de baja cuando quiera.</label>
           </div>
           <div class="hero-ctas">
             <button type="submit" class="btn btn-solid">Avisarme por correo</button>
             <a class="btn btn-ghost" style="color:#fff;border-color:#33427c" href="https://onelixglobal.gumroad.com/l/zzuwgg" target="_blank" rel="noopener">Comprar la guía digital</a>
           </div>
+          <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="locale" value="es">
         </form>
         <p class="hint-form">Te llegará un correo para confirmar la suscripción. Sin spam, prometido.</p>
       </div>
