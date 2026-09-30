@@ -240,6 +240,17 @@
   .cookie-banner .btn-ghost{color:#eef1fa;border-color:#3a4576}
   .cookie-banner .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 
+/* ---------- botón flotante de WhatsApp ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:150;display:inline-flex;align-items:center;gap:9px;
+  background:var(--navy);color:#fff;font-family:var(--inter);font-size:14px;font-weight:600;
+  padding:13px 20px;border-radius:999px;text-decoration:none;box-shadow:0 16px 34px -12px rgba(11,18,38,.5);
+  transition:transform .2s ease, background .2s ease, box-shadow .2s ease}
+.wa-float:hover{background:#182457;transform:translateY(-2px);box-shadow:0 20px 40px -12px rgba(11,18,38,.55)}
+.wa-float svg{width:19px;height:19px;flex:none}
+.wa-float span{white-space:nowrap}
+@media (max-width:600px){.wa-float{right:14px;bottom:14px;padding:12px 16px;font-size:13.5px}}
+@media print{.wa-float{display:none}}
+
   .cookie-modal{position:fixed;inset:0;z-index:210;background:rgba(11,18,38,.55);display:none;align-items:center;justify-content:center;padding:20px}
   .cookie-modal.show{display:flex}
   .cookie-modal-box{background:var(--card);border-radius:var(--r-lg);padding:32px;max-width:460px;width:100%;box-shadow:var(--shadow-lg)}
