@@ -187,7 +187,7 @@
 
   /* footer */
   footer{background:var(--ink);color:#8a94ad;padding:64px 0 40px;margin-top:0}
-  .foot-grid{display:grid;grid-template-columns:1.4fr repeat(auto-fit,minmax(120px,1fr));gap:32px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:32px}
   footer .brand{color:#fff;margin-bottom:16px}
   footer p{font-size:13.5px;line-height:1.7;max-width:300px}
   footer h5{font-family:var(--sora);color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
@@ -248,6 +248,12 @@
 .wa-float:hover{background:#182457;transform:translateY(-2px);box-shadow:0 20px 40px -12px rgba(11,18,38,.55)}
 .wa-float svg{width:19px;height:19px;flex:none}
 .wa-float span{white-space:nowrap}
+
+/* ---------- confirmación de la lista de espera ---------- */
+.signup-ok{background:rgba(255,255,255,.07);border:1px solid #33427c;border-radius:var(--r-md);
+  padding:20px 24px;color:#eef1fa;font-size:15px;line-height:1.65;max-width:520px}
+.signup-ok strong{color:#fff;display:block;margin-bottom:4px;font-family:var(--sora)}
+.signup-ok a{color:#9db4ff}
 @media (max-width:600px){.wa-float{right:14px;bottom:14px;padding:12px 16px;font-size:13.5px}}
 @media print{.wa-float{display:none}}
 
