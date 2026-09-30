@@ -107,9 +107,27 @@
     raiz.querySelector('.asis-lanzador').addEventListener('click', alternar);
     raiz.querySelector('.asis-cerrar').addEventListener('click', alternar);
 
+    colocarSegunAviso();
+    window.addEventListener('resize', colocarSegunAviso);
+    var aviso = document.querySelector('.cookie-banner');
+    if (aviso && window.MutationObserver) {
+      new MutationObserver(colocarSegunAviso).observe(aviso, { attributes: true, attributeFilter: ['class'] });
+    }
+
     // si hay JS, el botón de WhatsApp de la web se integra en el asistente
     var flotante = document.querySelector('.wa-float');
     if (flotante) flotante.style.display = 'none';
+  }
+
+  /* El aviso de cookies ocupa la parte de abajo: medimos cuánto y subimos el asistente
+     justo por encima, en vez de dejar un hueco fijo que puede quedarse corto. */
+  function colocarSegunAviso() {
+    var aviso = document.querySelector('.cookie-banner');
+    var alto = 22;
+    if (aviso && aviso.classList.contains('show')) {
+      alto = Math.round(aviso.getBoundingClientRect().height) + 18;
+    }
+    raiz.style.bottom = alto + 'px';
   }
 
   function alternar() {
