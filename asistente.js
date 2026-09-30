@@ -72,6 +72,7 @@
   /* ---------- montaje ---------- */
   var historial = [];       // títulos de los temas ya consultados
   var ultimoTema = null;
+  var saludado = false;     // el saludo se pinta la primera vez que se abre
 
   var raiz, panel, mensajes, acciones, pie;
 
@@ -83,23 +84,26 @@
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
           '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>' +
         '</svg><span>¿Te ayudo?</span></button>' +
-      '<section class="asis-panel" id="asis-panel" hidden aria-label="Asistente de OnelixGlobal">' +
+      '<div class="asis-panel" id="asis-panel" hidden aria-label="Asistente de OnelixGlobal">' +
         '<header class="asis-cabecera">' +
           '<div><strong>Asistente OnelixGlobal</strong><span class="asis-horario"></span></div>' +
           '<button type="button" class="asis-cerrar" aria-label="Cerrar el asistente">&times;</button>' +
         '</header>' +
         '<div class="asis-mensajes" role="log" aria-live="polite"></div>' +
-        '<div class="asis-acciones"></div>' +
         '<div class="asis-pie"><a class="asis-wa" href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>' +
           'Hablar con el comercial</a></div>' +
-      '</section>';
+      '</div>';
     document.body.appendChild(raiz);
 
     panel = raiz.querySelector('.asis-panel');
     mensajes = raiz.querySelector('.asis-mensajes');
-    acciones = raiz.querySelector('.asis-acciones');
     pie = raiz.querySelector('.asis-pie');
+
+    // las opciones viven dentro de la conversación: así todo se desplaza junto y nada queda recortado
+    acciones = document.createElement('div');
+    acciones.className = 'asis-acciones';
+    mensajes.appendChild(acciones);
 
     var horario = raiz.querySelector('.asis-horario');
     horario.textContent = enHorario() ? '🟢 En horario de atención' : '🕘 Fuera de horario (9:00-17:00, Colombia)';
@@ -109,6 +113,8 @@
 
     colocarSegunAviso();
     window.addEventListener('resize', colocarSegunAviso);
+    // las tipografías cambian la altura del texto al cargarse: recalculamos cuando estén listas
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(colocarSegunAviso).catch(function () {});
     var aviso = document.querySelector('.cookie-banner');
     if (aviso && window.MutationObserver) {
       new MutationObserver(colocarSegunAviso).observe(aviso, { attributes: true, attributeFilter: ['class'] });
@@ -120,7 +126,8 @@
   }
 
   /* El aviso de cookies ocupa la parte de abajo: medimos cuánto y subimos el asistente
-     justo por encima, en vez de dejar un hueco fijo que puede quedarse corto. */
+     justo por encima, en vez de dejar un hueco fijo que puede quedarse corto.
+     Y limitamos la altura del panel a lo que quede libre, para que no se salga por arriba. */
   function colocarSegunAviso() {
     var aviso = document.querySelector('.cookie-banner');
     var alto = 22;
@@ -128,6 +135,18 @@
       alto = Math.round(aviso.getBoundingClientRect().height) + 18;
     }
     raiz.style.bottom = alto + 'px';
+
+    var lanzador = raiz.querySelector('.asis-lanzador');
+    var altoLanzador = lanzador ? lanzador.offsetHeight : 46;
+    var libre = window.innerHeight - alto - altoLanzador - 14 - 16;   // 14: separación · 16: margen superior
+    libre = Math.max(240, Math.min(620, libre));
+
+    // El panel se limita a lo que cabe en pantalla; con flex, la conversación se recorta
+    // (y se desplaza) antes que la cabecera o el pie, que quedan siempre visibles.
+    panel.style.height = '';
+    panel.style.maxHeight = libre + 'px';
+    mensajes.style.height = '';
+    mensajes.style.maxHeight = '';
   }
 
   function alternar() {
@@ -135,25 +154,27 @@
     if (abierto) { panel.hidden = true; raiz.querySelector('.asis-lanzador').setAttribute('aria-expanded', 'false'); return; }
     panel.hidden = false;
     raiz.querySelector('.asis-lanzador').setAttribute('aria-expanded', 'true');
-    if (!mensajes.children.length) { saludo(); }
-    mensajes.scrollTop = mensajes.scrollHeight;
+    colocarSegunAviso();                 // al abrir, recalculamos el hueco disponible
+    if (!saludado) { saludado = true; saludo(); mensajes.scrollTop = 0; }
   }
 
-  function burbuja(html, quien) {
+  function burbuja(html, quien, desplazar) {
     var d = document.createElement('div');
     d.className = 'asis-msg asis-' + quien;
     d.innerHTML = html;
-    mensajes.appendChild(d);
-    mensajes.scrollTop = mensajes.scrollHeight;
+    mensajes.insertBefore(d, acciones);        // las burbujas van antes de las opciones
+    if (desplazar !== false) mensajes.scrollTop = mensajes.scrollHeight;
+    colocarSegunAviso();                       // el panel crece con la conversación
     return d;
   }
 
   function saludo() {
-    burbuja('¡Hola! 👋 Soy el asistente de OnelixGlobal — <strong>automático</strong>, no una persona. ¿En qué te ayudo?', 'bot');
+    burbuja('¡Hola! 👋 Soy el asistente de OnelixGlobal — <strong>automático</strong>, no una persona. ¿En qué te ayudo?', 'bot', false);
     if (!enHorario()) {
-      burbuja('Ahora estamos <strong>fuera de horario</strong> (lun-vie, 9:00-17:00, hora de Colombia). Consulta lo que quieras y, si necesitas a alguien, escríbenos por WhatsApp: te contestamos al abrir.', 'bot');
+      burbuja('Ahora estamos <strong>fuera de horario</strong> (lun-vie, 9:00-17:00, hora de Colombia). Consulta lo que quieras y, si necesitas a alguien, escríbenos por WhatsApp: te contestamos al abrir.', 'bot', false);
     }
     pintarBotones(INICIO);
+    colocarSegunAviso();
   }
 
   function pintarBotones(claves) {
@@ -205,6 +226,7 @@
       cont.appendChild(b);
     });
     if (extra.length) { if (clave === 'productos') { acciones.appendChild(cont); } else { acciones.innerHTML = ''; acciones.appendChild(cont); } }
+    colocarSegunAviso();                       // el panel se ajusta también a las opciones nuevas
   }
 
   function abrirWhatsApp() {
@@ -225,6 +247,7 @@
     }
     burbuja('Te he llevado al formulario: escribe tu correo ahí y listo.', 'bot');
     pintarBotones(['persona', 'envios']);
+    colocarSegunAviso();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', crear);
