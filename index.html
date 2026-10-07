@@ -59,6 +59,14 @@
       "merchantReturnDays": 30,
       "returnMethod": "https://schema.org/ReturnByMail",
       "returnFees": "https://schema.org/ReturnFeesFreeReturn"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": { "@type": "MonetaryAmount", "value": 0, "currency": "USD" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+      }
     }
   }
 }
