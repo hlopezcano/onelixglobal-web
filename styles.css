@@ -329,6 +329,7 @@
 .producto-card .pc-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:5px;flex:1}
 .producto-card h3{font-family:var(--sora);font-size:14.5px;font-weight:700;line-height:1.3;color:var(--navy);margin:0}
 .producto-card .pc-precio{font-family:var(--sora);font-weight:700;font-size:16px;color:var(--blue)}
+.producto-card .pc-reclamo{font-size:13px;color:var(--muted);line-height:1.4;margin:0}
 .producto-card .pc-precio small{font-weight:500;font-size:11px;color:var(--muted)}
 .producto-card .pc-cta{margin-top:auto;font-family:var(--sora);font-weight:600;font-size:13.5px;color:var(--gold)}
 .ver-tienda{margin-top:26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
