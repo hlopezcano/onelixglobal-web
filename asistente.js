@@ -12,7 +12,7 @@
   'use strict';
 
   var WHATSAPP = '34604802583';
-  var GUMROAD = 'https://onelixglobal.gumroad.com/l/cuello-hombros-sin-tension';
+  var GUMROAD = 'https://onelixglobal.gumroad.com';
   var HORARIO = { dias: [1, 2, 3, 4, 5], desde: 9, hasta: 17 }; // Lun-Vie, 9:00-17:00 Colombia
 
   /* ---------- ¿estamos en horario? (Colombia = UTC-5 todo el año, sin cambio horario) ---------- */
@@ -38,11 +38,11 @@
       botones: ['envios', 'productos', 'persona']
     },
     productos: {
-      texto: 'Estamos abriendo la tienda de Colombia con el primer producto de bienestar para <strong>cuello y hombros</strong> — lo probamos nosotros antes de venderlo. Muy pronto en <a href="https://tienda.onelixglobal.com" target="_blank" rel="noopener">tienda.onelixglobal.com</a>.<br><br>La guía digital «Cuello y hombros sin tensión» ya está a la venta y se descarga al momento.',
+      texto: 'La tienda de Colombia está <strong>abierta con 12 productos</strong> útiles para el día a día (hogar, bienestar y tecnología), con pago contra entrega en <a href="https://tienda.onelixglobal.com" target="_blank" rel="noopener">tienda.onelixglobal.com</a>.<br><br>Además tenemos <strong>6 guías digitales</strong> en PDF (cuello, sueño, ansiedad, aromaterapia, metas y dinero) que se descargan al momento desde cualquier país.',
       botones: ['aviso', 'envios', 'persona']
     },
     fuera: {
-      texto: 'De momento el catálogo físico se entrega <strong>solo en Colombia</strong>. La guía digital sí puedes comprarla y descargarla desde cualquier país.',
+      texto: 'De momento el catálogo físico se entrega <strong>solo en Colombia</strong>. Las <strong>guías digitales</strong> sí puedes comprarlas y descargarlas desde cualquier país.',
       botones: ['productos', 'persona']
     },
     aviso: {
@@ -210,7 +210,7 @@
       var a = document.createElement('a');
       a.className = 'asis-boton asis-boton-link';
       a.href = GUMROAD; a.target = '_blank'; a.rel = 'noopener';
-      a.textContent = '📘 Ver la guía digital (8,90 $)';
+      a.textContent = '📘 Ver las guías digitales';
       acciones.innerHTML = '';
       acciones.appendChild(a);
     }
