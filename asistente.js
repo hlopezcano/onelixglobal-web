@@ -46,7 +46,7 @@
       botones: ['productos', 'persona']
     },
     aviso: {
-      texto: 'Perfecto: te llevo al formulario de la web para que dejes tu correo. Te avisamos en cuanto abramos el catálogo físico (y solo para eso).',
+      texto: 'Perfecto: te llevo al formulario de la web para que dejes tu correo. Te avisamos de productos nuevos y ofertas (y solo para eso).',
       accion: 'irAFormulario',
       botones: ['persona']
     },
