@@ -38,7 +38,7 @@
       botones: ['envios', 'productos', 'persona']
     },
     productos: {
-      texto: 'La tienda de Colombia está <strong>abierta con 12 productos</strong> útiles para el día a día (hogar, bienestar y tecnología), con pago contra entrega en <a href="https://tienda.onelixglobal.com" target="_blank" rel="noopener">tienda.onelixglobal.com</a>.<br><br>Además tenemos <strong>6 guías digitales</strong> en PDF (cuello, sueño, ansiedad, aromaterapia, metas y dinero) que se descargan al momento desde cualquier país.',
+      texto: 'La tienda de Colombia está <strong>abierta con 17 productos</strong> útiles para el día a día (hogar, bienestar, tecnología, cocina y mascotas), con pago contra entrega en <a href="https://tienda.onelixglobal.com" target="_blank" rel="noopener">tienda.onelixglobal.com</a>.<br><br>Además tenemos <strong>7 guías digitales</strong> en PDF (cuello, sueño, ansiedad, aromaterapia, mindfulness, metas y dinero) que se descargan al momento desde cualquier país.',
       botones: ['aviso', 'envios', 'persona']
     },
     fuera: {
