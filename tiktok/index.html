@@ -4,52 +4,90 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Autorización de TikTok · OnelixGlobal</title>
+<title>Conectar TikTok · OnelixGlobal</title>
 <style>
   :root{--navy:#0F1B3D;--blue:#1848D8;--gold:#C9A24A;--muted:#5B6478}
+  *{box-sizing:border-box}
   body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
        background:#F7F3EA;color:var(--navy);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:24px}
   .box{max-width:640px;width:100%}
-  h1{font-size:22px;margin:0 0 6px}
-  p{color:var(--muted);line-height:1.55;margin:0 0 14px}
+  .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:var(--gold);font-weight:700;display:block;margin-bottom:10px}
+  h1{font-size:24px;margin:0 0 8px}
+  p{color:var(--muted);line-height:1.55;margin:0 0 16px}
+  a.btn,button{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:999px;
+        padding:14px 26px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none}
+  a.btn:hover,button:hover{background:#2a62f0}
   .code{display:block;word-break:break-all;background:#fff;border:1px solid #E3DCCB;border-radius:12px;
-        padding:14px;font-family:ui-monospace,Consolas,monospace;font-size:14px;color:var(--navy);margin:0 0 14px}
-  button{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:12px 22px;font-weight:700;
-         font-size:15px;cursor:pointer}
+        padding:14px;font-family:ui-monospace,Consolas,monospace;font-size:14px;margin:0 0 14px}
   .ok{color:#1F8A4C;font-weight:600}
-  .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:var(--gold);font-weight:700;margin-bottom:10px;display:block}
+  .card{background:#fff;border:1px solid #E3DCCB;border-radius:16px;padding:22px;margin-top:18px}
+  small{color:#8A93A6;font-size:12px;line-height:1.5;display:block}
 </style>
 </head>
 <body>
 <div class="box">
   <span class="eyebrow">OnelixGlobal · TikTok</span>
-  <h1 id="titulo">Autorización recibida</h1>
-  <p id="texto">Copia este código y pégalo en el asistente. Caduca en 10 minutos.</p>
-  <code class="code" id="codigo">—</code>
-  <button id="copiar">Copiar código</button>
-  <p id="estado" style="margin-top:14px"></p>
+  <h1>Conectar la cuenta de TikTok</h1>
+  <p>Autoriza la cuenta <strong>@onelixglobaloficial</strong> para que OnelixGlobal pueda subir los vídeos de producto a tu bandeja de entrada de TikTok como borradores. Tú los revisas y los publicas desde la app.</p>
+
+  <a class="btn" id="conectar" href="#">Conectar con TikTok</a>
+
+  <div class="card" id="resultado" style="display:none">
+    <p class="ok" id="texto-ok">Autorización recibida. Copia este código y pégalo en el asistente.</p>
+    <code class="code" id="codigo">—</code>
+    <button id="copiar">Copiar código</button>
+    <p id="estado" class="ok" style="margin-top:12px"></p>
+  </div>
+
+  <div class="card">
+    <p style="margin:0 0 8px"><strong>Qué se pide exactamente</strong></p>
+    <small>· <strong>user.info.basic</strong> — saber qué cuenta se ha conectado (nombre y avatar).<br>
+    · <strong>video.upload</strong> — subir tus vídeos a la bandeja de entrada como borrador. Nunca se publica nada sin que tú lo confirmes en la app.<br>
+    · No se lee nada más de tu cuenta ni se guardan datos de terceros.</small>
+  </div>
+  <small style="margin-top:14px">Si quieres revocar el acceso: TikTok → Ajustes y privacidad → Seguridad → Gestionar permisos de apps.</small>
 </div>
+
 <script>
-  var p = new URLSearchParams(location.search);
-  var code = p.get("code") || "";
-  var err = p.get("error") || p.get("error_description") || "";
-  var caja = document.getElementById("codigo");
-  if (err) {
-    document.getElementById("titulo").textContent = "TikTok devolvió un error";
-    caja.textContent = err;
-    document.getElementById("copiar").style.display = "none";
-  } else if (code) {
-    caja.textContent = code;
-  } else {
-    document.getElementById("titulo").textContent = "Falta el código";
-    caja.textContent = "Abre esta página desde el enlace de autorización que te dio el asistente.";
+  // client_key es público por diseño en OAuth (el secreto no aparece aquí nunca).
+  var CLIENT_KEY = "awroh56c89a1306o";
+  var REDIRECT = "https://onelixglobal.com/tiktok/";
+  var SCOPES = "user.info.basic,video.upload";
+
+  function urlAutorizacion() {
+    var p = new URLSearchParams({
+      client_key: CLIENT_KEY,
+      scope: SCOPES,
+      response_type: "code",
+      redirect_uri: REDIRECT,
+      state: "onelix"
+    });
+    return "https://www.tiktok.com/v2/auth/authorize/?" + p.toString();
   }
+
+  document.getElementById("conectar").href = urlAutorizacion();
+
+  var q = new URLSearchParams(location.search);
+  var code = q.get("code") || "";
+  var err = q.get("error") || q.get("error_description") || "";
+
+  if (code || err) {
+    document.getElementById("resultado").style.display = "block";
+    document.getElementById("conectar").style.display = "none";
+    if (err) {
+      document.getElementById("texto-ok").textContent = "TikTok devolvió un error:";
+      document.getElementById("texto-ok").className = "";
+      document.getElementById("codigo").textContent = err;
+      document.getElementById("copiar").style.display = "none";
+    } else {
+      document.getElementById("codigo").textContent = code;
+    }
+  }
+
   document.getElementById("copiar").onclick = function () {
     if (!code) return;
     navigator.clipboard.writeText(code).then(function () {
-      var e = document.getElementById("estado");
-      e.textContent = "Copiado ✓";
-      e.className = "ok";
+      document.getElementById("estado").textContent = "Copiado ✓";
     });
   };
 </script>
