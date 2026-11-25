@@ -345,6 +345,8 @@
   text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .bloque-head h3{font-family:var(--sora);font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,2.2vw,28px);color:var(--navy);margin:0 0 8px}
 .bloque-nota{font-size:14.5px;color:var(--muted);margin:0}
+.bloque-link{display:inline-block;margin-top:10px;font-family:var(--sora);font-weight:600;font-size:13.5px;color:var(--blue);text-decoration:none;border-bottom:1px solid #c9d6ff}
+.bloque-link:hover{color:var(--navy);border-color:var(--gold)}
 .bloque .productos-grid{margin-top:22px}
 /* los dos bloques del catálogo van en el mismo panel arena */
 .bloque-panel{margin-top:26px;background:#F4EFE4;border:1px solid var(--line);border-radius:22px;
